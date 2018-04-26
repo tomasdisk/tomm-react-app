@@ -1,64 +1,27 @@
-import React, { Component } from 'react'
-import {BrowserRouter} from 'react-router-dom'
-import Header from './Header'
-import './App.css'
-import TodoList from './TodoList'
+import React, { Component } from "react"
+import { BrowserRouter } from "react-router-dom"
+import Header from "./Header"
+import "./App.css"
+import TodoList from "./TodoList"
+import axios from "axios"
 
 class App extends Component {
-  newProps = {
-    todos: [
-      {
-        TodoID: '0',
-        TodoContent: {
-          TodoTitle: 'primer titulo',
-          TodoDescription: 'primera descripcion'
-        },
-        TodoAuthor: {
-          TodoAuthorImage: {
-            Image: './favicon.ico',
-            Alt: 'icon'
-          },
-          TodoAuthorName: 'juan'
-        }
-      },
-      {
-        TodoID: '1',
-        TodoContent: {
-          TodoTitle: 'titulo nuevo',
-          TodoDescription: 'descripcion nueva'
-        },
-        TodoAuthor: {
-          TodoAuthorImage: {
-            Image: './favicon.ico',
-            Alt: 'icon'
-          },
-          TodoAuthorName: 'pablo'
-        }
-      },
-      {
-        TodoID: '2',
-        TodoContent: {
-          TodoTitle: 'otro tirulo',
-          TodoDescription: 'otra descripcion'
-        },
-        TodoAuthor: {
-          TodoAuthorImage: {
-            Image: './favicon.ico',
-            Alt: 'icon'
-          },
-          TodoAuthorName: 'jaime'
-        }
-      }
-    ]
+  state = {
+    todos: []
   }
 
-  render () {
+  componentDidMount() {
+    axios
+      .get("http://localhost:3001/todos/")
+      .then(response => this.setState({ todos: response.data }))
+  }
+
+  render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <Header/>
-          <TodoList {...this.newProps}/>
-
+          <Header />
+          <TodoList todos={this.state.todos} />
         </div>
       </BrowserRouter>
     )
