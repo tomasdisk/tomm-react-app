@@ -5,7 +5,7 @@ function TodoAuthor (props) {
   return (
     <div>
       <UserThumbnail {...props.TodoAuthorImage}/>
-      <div className="todo-TodoAuthor">
+      <div className="todo-author">
         {props.TodoAuthorName}
       </div>
     </div>
