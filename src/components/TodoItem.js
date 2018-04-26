@@ -3,11 +3,11 @@ import TodoContent from './TodoContent'
 import TodoAuthor from './TodoAuthor'
 
 class TodoItem extends Component {
-  render () {
+  render() {
     return (
       <div className="todo-item">
-        <TodoContent {...this.props.TodoContent}/>
-        <TodoAuthor {...this.props.TodoAuthor}/>
+        <TodoContent {...this.props.TodoContent} />
+        <TodoAuthor {...this.props.TodoAuthor} />
       </div>
     )
   }

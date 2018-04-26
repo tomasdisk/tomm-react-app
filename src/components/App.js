@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import Header from './Header'
 import './App.css'
 import TodoList from './TodoList'
@@ -11,54 +11,53 @@ class App extends Component {
         TodoID: '0',
         TodoContent: {
           TodoTitle: 'primer titulo',
-          TodoDescription: 'primera descripcion'
+          TodoDescription: 'primera descripcion',
         },
         TodoAuthor: {
           TodoAuthorImage: {
             Image: './favicon.ico',
-            Alt: 'icon'
+            Alt: 'icon',
           },
-          TodoAuthorName: 'juan'
-        }
+          TodoAuthorName: 'juan',
+        },
       },
       {
         TodoID: '1',
         TodoContent: {
           TodoTitle: 'titulo nuevo',
-          TodoDescription: 'descripcion nueva'
+          TodoDescription: 'descripcion nueva',
         },
         TodoAuthor: {
           TodoAuthorImage: {
             Image: './favicon.ico',
-            Alt: 'icon'
+            Alt: 'icon',
           },
-          TodoAuthorName: 'pablo'
-        }
+          TodoAuthorName: 'pablo',
+        },
       },
       {
         TodoID: '2',
         TodoContent: {
           TodoTitle: 'otro tirulo',
-          TodoDescription: 'otra descripcion'
+          TodoDescription: 'otra descripcion',
         },
         TodoAuthor: {
           TodoAuthorImage: {
             Image: './favicon.ico',
-            Alt: 'icon'
+            Alt: 'icon',
           },
-          TodoAuthorName: 'jaime'
-        }
-      }
-    ]
+          TodoAuthorName: 'jaime',
+        },
+      },
+    ],
   }
 
-  render () {
+  render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <Header/>
-          <TodoList {...this.newProps}/>
-
+          <Header />
+          <TodoList {...this.newProps} />
         </div>
       </BrowserRouter>
     )
