@@ -1,19 +1,46 @@
 {
-  "posts": [
+  "todos": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "TodoID": "0",
+      "TodoContent": {
+        "TodoTitle": "primer titulo",
+        "TodoDescription": "primera descripcion"
+      },
+      "TodoAuthor": {
+        "TodoAuthorImage": {
+          "Image": "./favicon.ico",
+          "Alt": "icon"
+        },
+        "TodoAuthorName": "juan"
+      }
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "TodoID": "1",
+      "TodoContent": {
+        "TodoTitle": "titulo nuevo",
+        "TodoDescription": "descripcion nueva"
+      },
+      "TodoAuthor": {
+        "TodoAuthorImage": {
+          "Image": "./favicon.ico",
+          "Alt": "icon"
+        },
+        "TodoAuthorName": "pablo"
+      }
+    },
+    {
+      "TodoID": "2",
+      "TodoContent": {
+        "TodoTitle": "otro tirulo",
+        "TodoDescription": "otra descripcion"
+      },
+      "TodoAuthor": {
+        "TodoAuthorImage": {
+          "Image": "./favicon.ico",
+          "Alt": "icon"
+        },
+        "TodoAuthorName": "jaime"
+      }
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
